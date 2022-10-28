@@ -1,7 +1,7 @@
 # FirebaseDatabaseControl
 Control your Firebase Database from CLI
 
-![Preview](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Preview](info.gif)
 
 Извиняюсь за некрасивый код, впервые пишу на питоне (этот проект был создан  за 2 часа)
 
