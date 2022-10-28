@@ -1,18 +1,12 @@
-import click
 import os
 import json
+import click
 import requests
 from pyfiglet import Figlet
 from pyautogui import typewrite
 from colorama import Fore, Back, Style
 
 prew = Figlet(font='slant')
-if os.name == 'nt':
-    clear_command = 'cls'
-else:
-    clear_command = 'clear'
-os.system(clear_command)
-print(Fore.GREEN)
 database_url = 'https://<database>.firebaseio.com/'
 database_keys = '.json?auth=<token>'
 database_json = requests.get(database_url+database_keys).text
@@ -20,6 +14,13 @@ database_dict = json.loads(database_json)
 choise = ''
 parent = ''
 child = ''
+
+if os.name == 'nt':
+    clear_command = 'cls'
+else:
+    clear_command = 'clear'
+os.system(clear_command)
+print(Fore.GREEN)
 
 def RemoveParent():
     if(click.confirm(f'Are you sure you want to remove parent "{parent}"?', default=False)):
